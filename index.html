@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./calculator.css">
+
+    <script src="./calculator.js" defer></script>
+
+</head>
+
+<body>  
+    <!-- <h1>may calc</h1>
+    <div id="display">
+        <input id="displayNum" value=""/>
+
+    </div>
+
+    <div id="keys">
+        <button type="button" onclick="baby()">CE</button>
+        <button type="button" onclick="baby()" >C</button>
+        <button type="button" id="num" onclick="clearth()">DEL</button>
+        <button  type="button" id="num" value="*" onclick="displayNum('*')">X</button>
+        <button type="button" id="num" value="7" onclick="displayNum('7')">7</button>
+        <button  type="button" id="num" value="8" onclick="displayNum('8')">8</button>
+        <button  type="button" id="num" value="9" onclick="displayNum('9')">9</button>
+        <button  type="button" id="num" value="4" onclick="displayNum('4')">4</button>
+        <button  type="button" id="num" value="5" onclick="displayNum('5')">5</button>
+        <button  type="button" id="num" value="6" onclick="displayNum('6')">6</button> 
+        <button  type="button" id="num" value="1" onclick="displayNum('1')">1</button>
+        <button  type="button" id="num" value="2" onclick="displayNum('2')">2</button>
+        <button  type="button" id="num" value=""3 onclick="displayNum('3')">3</button>
+        <button   type="button" id="num" value="0" onclick="displayNum('0')">0</button>
+        <button  type="button" id="num" value="/" onclick="displayNum('/')">/</button>
+        <button  type="button" id="num" value="+" onclick="displayNum('+')">+</button>
+        <button  type="button" id="num" value="-" onclick="displayNum('-')">-</button>
+        <button  type="button" id="num"  onclick="thevaluate()">=</button>
+        <button type="button" id="num" value="-" onclick="negate()">-/+</button>
+    </div>
+<script>
+    let display= document.getElementById('displayNum')
+    function displayNum(val){
+        display.value = display.value + val
+    }
+
+    function clearth(){
+       display.value=display.value.slice(0,-1)
+    }
+    function baby(){
+       display.value=""
+    }
+    function thevaluate(){ 
+       display.value= eval(display.value)
+    }
+    function negate(){
+        display.value = "-" + display.value
+    }
+
+</script> -->
+
+
+<div class="calcbody">
+    <div class="calcscreen"> 
+        <input id="display" readonly> 
+    </div>
+    <div class="calcbuttons">
+        <button id="arith1" onclick="showOnScreen('+')">+</button>
+        <button id="arith3" onclick="showOnScreen('*')">x</button>
+        <button id="arith4" onclick="showOnScreen('/')">/</button>
+        <button id="arith2" onclick="showOnScreen('-')">-</button> 
+
+        <button id="num7" onclick="showOnScreen('7')">7</button>
+        <button id="num8" onclick="showOnScreen('8')">8</button>
+        <button id="num9" onclick="showOnScreen('9')">9</button>
+
+        <button id="equal" onclick="calculate()">=</button>
+
+        <button id="num4" onclick="showOnScreen('4')">4</button>
+        <button id="num5" onclick="showOnScreen('5')">5</button>
+        <button id="num6" onclick="showOnScreen('6')">6</button>
+
+        <button id="num1" onclick="showOnScreen('1')">1</button>
+        <button id="num2" onclick="showOnScreen('2')">2</button>
+        <button id="num3" onclick="showOnScreen('3')">3</button>
+
+        <button id="dot" onclick="showOnScreen('.')">.</button>
+        <button id="num0" onclick="showOnScreen('0')">0</button>
+        <button id="clear" onclick="clearDisplay()">C</button>
+    </div>
+</div>
+
+</body>
+</html>
