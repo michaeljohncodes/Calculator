@@ -9,6 +9,7 @@ body{
     justify-content: center;
     align-items: center;
     background-color:rgba(37, 162, 190, 0.633);
+    font-family:'Courier New', Courier, monospace;
 }
 
 .calcbody{
