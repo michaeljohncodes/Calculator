@@ -45,8 +45,8 @@ body{
     padding: 5px;
     display: grid;
     gap: 5px;
-    grid-template-columns: 4(1fr);
-    grid-template-rows: 5(1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     grid-template-areas: 
     "k1 k2 k3 k4"
     "k5 k6 k7 k8"
