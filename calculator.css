@@ -1,197 +1,284 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    margin-inline: auto;
-    justify-content: center;
-    align-items: center;
-    background-color:rgba(37, 162, 190, 0.633);
-    font-family:'Courier New', Courier, monospace;
+body {
+  margin-inline: auto;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 64, 79, 0.633);
 }
 
-.calcbody{
-    display: grid;
-    margin: 40px auto;
-    width: 300px;
-    height: 320px;
+.calcbody {
+  display: grid;
+  margin: 40px auto;
+  width: 300px;
+  height: 320px;
+  box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.5);
+  filter: drop-shadow(-10px 10px 30px rgba(0, 0, 0, 0.5));
 }
 .calcscreen {
-    background-color: black;
-    width: 100%;
-    height: 80px;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+  background-color: black;
+  width: 100%;
+  height: 80px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
 
-#display{
-    background-color:transparent;
-    border: none;
-    width: 100%;
-    height: 100%;
-    text-align: right;
-    align-items: center;
-    color: white;
-    padding: 0px 10px;
-    font-size:x-large;
+#display {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  height: 100%;
+  text-align: right;
+  align-items: center;
+  color: white;
+  padding: 0px 10px;
+  font-size: x-large;
 }
 
-.calcbuttons{
-    background-color: white;
-    width: 100%;
-    height: 240px;
-    padding: 5px;
-    display: grid;
-    gap: 5px;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-template-areas: 
+.calcbuttons {
+  background-color: white;
+  width: 100%;
+  height: 240px;
+  padding: 5px;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: 4 (1fr);
+  grid-template-rows: 5 (1fr);
+  grid-template-areas:
     "k1 k2 k3 k4"
     "k5 k6 k7 k8"
     "k9 k10 k11 k8"
     "k12 k13 k14 k8"
-    "k15 k16 k17 k8";
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
+    "k15 k16 k17 k18";
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
-.calcbuttons button{
-    cursor: pointer;
+.calcbuttons button {
+  cursor: pointer;
 }
 
-#arith1{
-    background-color:rgb(93, 93, 93);
-    border: none;
-    border-radius: 5px;
-    width: 1fr;
-    color: white;
-    font-size: x-large;
-    /* padding: 10px; */
-    grid-area: k1;
+#arith1 {
+  background-color: rgb(93, 93, 93);
+  border: none;
+  border-radius: 5px;
+  width: 1fr;
+  color: white;
+  font-size: x-large;
+  /* padding: 10px; */
+  grid-area: k1;
 }
-#arith2{
-    background-color:rgb(93, 93, 93);
-    border: none;
-    border-radius: 5px;
-    width: 1fr;
-    color: white;
-    font-size: x-large;
-    /* padding: 10px; */
-    grid-area: k2;
+#arith1:hover {
+  background-color: rgb(69, 69, 69);
 }
-#arith3{
-    background-color:rgb(93, 93, 93);
-    border: none;
-    border-radius: 5px;
-    width: 1fr;
-    color: white;
-    font-size: x-large;
-    /* padding: 10px; */
-    grid-area: k3;
+
+#arith2 {
+  background-color: rgb(93, 93, 93);
+  border: none;
+  border-radius: 5px;
+  width: 1fr;
+  color: white;
+  font-size: x-large;
+  /* padding: 10px; */
+  grid-area: k2;
 }
-#arith4{
-    background-color:rgb(93, 93, 93);
-    border: none;
-    border-radius: 5px;
-    width: 1fr;
-    color: white;
-    font-size: x-large;
-    /* padding: 10px; */
-    grid-area: k4;
+#arith2:hover {
+  background-color: rgb(69, 69, 69);
 }
-#num7{
-    background-color: rgb(200, 198, 198);
-    border: none;
-    border-radius: 5px;
-    width: 1fr;
-    grid-area: k5;
+
+#arith3 {
+  background-color: rgb(93, 93, 93);
+  border: none;
+  border-radius: 5px;
+  width: 1fr;
+  color: white;
+  font-size: x-large;
+  /* padding: 10px; */
+  grid-area: k3;
 }
-#num8{
-    background-color: rgb(200, 198, 198);
-    border: none;
-    border-radius: 5px;
-    width: 1fr;
-    grid-area: k6;
+#arith3:hover {
+  background-color: rgb(69, 69, 69);
 }
-#num9{
-    background-color: rgb(200, 198, 198);
-    border: none;
-    border-radius: 5px;
-    width: 1fr;
-    grid-area: k7;
+
+#arith4 {
+  background-color: rgb(93, 93, 93);
+  border: none;
+  border-radius: 5px;
+  width: 1fr;
+  color: white;
+  font-size: x-large;
+  /* padding: 10px; */
+  grid-area: k4;
 }
-#equal{
-    background-color: rgb(5, 164, 37);
-    border: none;
-    border-radius: 5px;
-    width: 1fr;
-    grid-area: k8;
-    color: white;
-    font-size: x-large;
+#arith4:hover{
+    background-color:rgb(69, 69, 69);
 }
-#num4{
-    background-color: rgb(200, 198, 198);
-    border: none;
-    border-radius: 5px;
-    width: 1fr;
-    grid-area: k9;
+
+
+#num7 {
+  background-color: rgb(200, 198, 198);
+  border: none;
+  border-radius: 5px;
+  width: 1fr;
+  grid-area: k5;
 }
-#num5{
-    background-color: rgb(200, 198, 198);
-    border: none;
-    border-radius: 5px;
-    width: 1fr;
-    grid-area: k10;
+#num7:hover{
+  background-color: rgb(165, 164, 164);
 }
-#num6{
-    background-color: rgb(200, 198, 198);
-    border: none;
-    border-radius: 5px;
-    width: 1fr;
-    grid-area: k11;
+
+
+#num8 {
+  background-color: rgb(200, 198, 198);
+  border: none;
+  border-radius: 5px;
+  width: 1fr;
+  grid-area: k6;
 }
-#num1{
-    background-color: rgb(200, 198, 198);
-    border: none;
-    border-radius: 5px;
-    width: 1fr;
-    grid-area: k12;
+#num8:hover{
+  background-color: rgb(165, 164, 164);
 }
-#num2{
-    background-color: rgb(200, 198, 198);
-    border: none;
-    border-radius: 5px;
-    width: 1fr;
-    grid-area: k13;
+
+
+#num9 {
+  background-color: rgb(200, 198, 198);
+  border: none;
+  border-radius: 5px;
+  width: 1fr;
+  grid-area: k7;
 }
-#num3{
-    background-color: rgb(200, 198, 198);
-    border: none;
-    border-radius: 5px;
-    width: 1fr;
-    grid-area: k14;
+#num9:hover{
+  background-color: rgb(165, 164, 164);
 }
-#dot{
-    background-color: rgb(200, 198, 198);
-    border: none;
-    border-radius: 5px;
-    font-weight: 800;
-    width: 1fr;
-    grid-area: k15;
+
+
+#equal {
+  background-color: rgb(5, 164, 37);
+  border: none;
+  border-radius: 5px;
+  width: 1fr;
+  grid-area: k8;
+  color: white;
+  font-size: x-large;
 }
-#num0{
-    background-color: rgb(200, 198, 198);
-    border: none;
-    border-radius: 5px;
-    width: 1fr;
-    grid-area: k16;
+#equal:hover {
+  background-color: rgb(2, 122, 26);
 }
-#clear{
-    background-color: rgb(237, 21, 21);
-    border: none;
-    border-radius: 5px;
-    width: 1fr;
-    grid-area: k17;
-    color: white;
+
+#num4 {
+  background-color: rgb(200, 198, 198);
+  border: none;
+  border-radius: 5px;
+  width: 1fr;
+  grid-area: k9;
+}
+#num4:hover{
+  background-color: rgb(165, 164, 164);
+}
+
+#num5 {
+  background-color: rgb(200, 198, 198);
+  border: none;
+  border-radius: 5px;
+  width: 1fr;
+  grid-area: k10;
+}
+#num5:hover{
+  background-color: rgb(165, 164, 164);
+}
+
+
+#num6 {
+  background-color: rgb(200, 198, 198);
+  border: none;
+  border-radius: 5px;
+  width: 1fr;
+  grid-area: k11;
+}
+#num6:hover{
+  background-color: rgb(165, 164, 164);
+}
+
+
+#num1 {
+  background-color: rgb(200, 198, 198);
+  border: none;
+  border-radius: 5px;
+  width: 1fr;
+  grid-area: k12;
+}
+#num1:hover{
+  background-color: rgb(165, 164, 164);
+}
+
+
+#num2 {
+  background-color: rgb(200, 198, 198);
+  border: none;
+  border-radius: 5px;
+  width: 1fr;
+  grid-area: k13;
+}
+#num2:hover{
+  background-color: rgb(165, 164, 164);
+}
+
+#num3 {
+  background-color: rgb(200, 198, 198);
+  border: none;
+  border-radius: 5px;
+  width: 1fr;
+  grid-area: k14;
+}
+#num3:hover{
+  background-color: rgb(165, 164, 164);
+}
+
+#dot {
+  background-color: rgb(200, 198, 198);
+  border: none;
+  border-radius: 5px;
+  font-weight: 800;
+  width: 1fr;
+  grid-area: k15;
+}
+#dot:hover{
+  background-color: rgb(165, 164, 164);
+}
+
+#num0 {
+  background-color: rgb(200, 198, 198);
+  border: none;
+  border-radius: 5px;
+  width: 1fr;
+  grid-area: k16;
+}
+#num0:hover{
+  background-color: rgb(165, 164, 164);
+}
+
+#clear {
+  background-color: rgb(237, 21, 21);
+  border: none;
+  border-radius: 5px;
+  width: 1fr;
+  grid-area: k17;
+  color: white;
+}
+#clear:hover {
+  background-color: rgb(206, 3, 3);
+}
+
+#backSpace {
+  background-color: black;
+  border: none;
+  border-radius: 5px;
+  width: 1fr;
+  grid-area: k18;
+  color: white;
+}
+#backSpace:hover {
+  background-color: rgb(60, 59, 59);
 }

@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
-    <link rel="stylesheet" href="./calculator.css">
+    <link rel="stylesheet" href="./calculator.css" />
 
     <script src="./calculator.js" defer></script>
+  </head>
 
-</head>
-
-<body>  
- <div class="calcbody">
-    <div class="calcscreen"> 
-        <input id="display" readonly> 
-    </div>
-    <div class="calcbuttons">
-        <button id="arith1" onclick="showOnScreen('+')">+</button>
+  <body>
+    <div class="calcbody">
+      <div class="calcscreen">
+        <input id="display" readonly />
+      </div>
+      <div class="calcbuttons">
+        <button class="arith" id="arith1" onclick="showOnScreen('+')">+</button>
         <button id="arith3" onclick="showOnScreen('*')">x</button>
         <button id="arith4" onclick="showOnScreen('/')">/</button>
-        <button id="arith2" onclick="showOnScreen('-')">-</button> 
+        <button id="arith2" onclick="showOnScreen('-')">-</button>
 
         <button id="num7" onclick="showOnScreen('7')">7</button>
         <button id="num8" onclick="showOnScreen('8')">8</button>
@@ -38,8 +37,8 @@
         <button id="dot" onclick="showOnScreen('.')">.</button>
         <button id="num0" onclick="showOnScreen('0')">0</button>
         <button id="clear" onclick="clearDisplay()">C</button>
+        <button id="backSpace" onclick="backSpace()">BS</button>
+      </div>
     </div>
-</div>
-
-</body>
+  </body>
 </html>
